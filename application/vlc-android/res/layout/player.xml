@@ -20,7 +20,6 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="false" />
 
-
     <androidx.appcompat.widget.ViewStubCompat
             android:id="@+id/player_seek_stub"
             android:layout_width="match_parent"
@@ -80,8 +79,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:visibility="invisible"
-                app:srcCompat="@drawable/ic_cone_o" />
+                android:visibility="gone" />
 
         <androidx.appcompat.widget.ViewStubCompat
                 android:id="@+id/player_info_stub"
@@ -197,7 +195,6 @@
                     android:nextFocusDown="@+id/video_playlist" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/video_playlist"
                 android:layout_width="match_parent"
@@ -224,6 +221,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout="@layout/player_resize" />
+
     <androidx.appcompat.widget.ViewStubCompat
             android:id="@+id/player_orientation_stub"
             android:layout_width="match_parent"
@@ -235,6 +233,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout="@layout/player_screenshot" />
-
 
 </FrameLayout>
