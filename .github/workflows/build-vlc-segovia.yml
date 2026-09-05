@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 90
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -50,18 +51,40 @@ jobs:
         with:
           gradle-version: "9.3.1"
 
+      - name: Prepare VLC Gradle helper
+        shell: bash
+        run: |
+          cd "$GITHUB_WORKSPACE"
+
+          echo "Creating Gradle version helper..."
+
+          mkdir -p buildsystem/gradle_version
+
+          cat > buildsystem/gradle_version/build.gradle <<'EOF'
+          println 'gradle_version=' + gradle.getGradleVersion()
+          EOF
+
+          echo "Helper created:"
+          cat buildsystem/gradle_version/build.gradle
+
       - name: Initialize VLC build environment
         shell: bash
         run: |
           cd "$GITHUB_WORKSPACE"
 
-          echo "Workspace: $(pwd)"
-          echo "Checking VLC build files..."
+          echo "Workspace:"
+          pwd
+
+          echo "Checking VLC build system..."
 
           test -f buildsystem/compile.sh
-          test -d buildsystem/gradle_version
 
           chmod +x buildsystem/compile.sh
+
+          echo "Gradle version:"
+          gradle --version
+
+          echo "Starting VLC initialization..."
 
           ./buildsystem/compile.sh --init -b
 
@@ -83,7 +106,9 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE"
 
-          gradle assembleDebug \
+          echo "Building VLC Segovia TV..."
+
+          ./gradlew assembleDebug \
             --no-daemon \
             --stacktrace
 
@@ -99,6 +124,7 @@ jobs:
             -path '*/build/outputs/apk/*.apk' \
             -exec cp -v {} artifacts/ \;
 
+          echo ""
           echo "APK files found:"
           ls -lh artifacts
 
