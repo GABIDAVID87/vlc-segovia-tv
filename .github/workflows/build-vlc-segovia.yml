@@ -3,7 +3,8 @@ name: Build VLC Segovia TV
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -43,18 +44,18 @@ jobs:
           echo "ANDROID_NDK=$ANDROID_HOME/ndk/21.4.7075529" >> "$GITHUB_ENV"
           echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> "$GITHUB_ENV"
 
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+
       - name: Initialize VLC build environment
         shell: bash
         run: |
           chmod +x buildsystem/compile.sh
           ./buildsystem/compile.sh --init -b
 
-      - name: Set up Gradle
-  uses: gradle/actions/setup-gradle@v4
-  with:
-    gradle-version: "9.3.1"
-
-  - name: Build debug APK
+      - name: Build debug APK
         shell: bash
         run: |
           gradle assembleDebug --no-daemon --stacktrace
