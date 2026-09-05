@@ -51,6 +51,16 @@ jobs:
         with:
           gradle-version: "9.3.1"
 
+      - name: Configure Git identity
+        shell: bash
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          echo "Git identity:"
+          git config --global user.name
+          git config --global user.email
+
       - name: Prepare VLC Gradle helper
         shell: bash
         run: |
@@ -83,6 +93,10 @@ jobs:
 
           echo "Gradle version:"
           gradle --version
+
+          echo "Git identity:"
+          git config --global user.name
+          git config --global user.email
 
           echo "Starting VLC initialization..."
 
