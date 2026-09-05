@@ -31,6 +31,7 @@ jobs:
         shell: bash
         run: |
           yes | sdkmanager --licenses >/dev/null || true
+
           sdkmanager \
             "platform-tools" \
             "platforms;android-36" \
@@ -52,21 +53,55 @@ jobs:
       - name: Initialize VLC build environment
         shell: bash
         run: |
+          cd "$GITHUB_WORKSPACE"
+
+          echo "Workspace: $(pwd)"
+          echo "Checking VLC build files..."
+
+          test -f buildsystem/compile.sh
+          test -d buildsystem/gradle_version
+
           chmod +x buildsystem/compile.sh
+
           ./buildsystem/compile.sh --init -b
+
+      - name: Verify Gradle wrapper
+        shell: bash
+        run: |
+          cd "$GITHUB_WORKSPACE"
+
+          echo "Checking Gradle wrapper..."
+
+          test -f gradlew
+
+          chmod +x gradlew
+
+          ./gradlew --version
 
       - name: Build debug APK
         shell: bash
         run: |
-          gradle assembleDebug --no-daemon --stacktrace
+          cd "$GITHUB_WORKSPACE"
+
+          gradle assembleDebug \
+            --no-daemon \
+            --stacktrace
 
       - name: Collect APK
         shell: bash
         run: |
+          cd "$GITHUB_WORKSPACE"
+
           mkdir -p artifacts
-          find . -type f -path '*/build/outputs/apk/*.apk' -exec cp -v {} artifacts/ \;
+
+          find . \
+            -type f \
+            -path '*/build/outputs/apk/*.apk' \
+            -exec cp -v {} artifacts/ \;
+
           echo "APK files found:"
           ls -lh artifacts
+
           test -n "$(find artifacts -type f -name '*.apk' -print -quit)"
 
       - name: Upload APK
