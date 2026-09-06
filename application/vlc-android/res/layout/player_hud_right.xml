@@ -7,7 +7,6 @@
 
     </data>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/hud_right_overlay"
             android:layout_width="match_parent"
@@ -47,7 +46,6 @@
                 app:srcCompat="@drawable/ic_player_navmenu"
                 tools:visibility="visible" />
 
-
         <ImageView
                 android:id="@+id/player_screenshot"
                 android:layout_width="wrap_content"
@@ -80,7 +78,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="11"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="#FFFF00"
                 android:textSize="22sp"
                 app:layout_constrainedWidth="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +106,7 @@
                 android:shadowRadius="11"
                 android:text="@string/unknown"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="#FFFF00"
                 android:textSize="22sp"
                 app:drawableStartCompat="@drawable/ic_warning_small"
                 app:layout_constrainedWidth="true"
@@ -202,7 +200,8 @@
                         android:onClick="onClick"
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_player_lock_portrait"
-                        app:chipIconTint="@color/white"/>
+                        app:chipIconTint="#FFFF00"/>
+
                 <com.google.android.material.chip.Chip
                         android:id="@+id/playback_speed_quick_action"
                         android:layout_width="wrap_content"
@@ -210,7 +209,7 @@
                         android:onClick="onClick"
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_speed"
-                        app:chipIconTint="@color/white"
+                        app:chipIconTint="#FFFF00"
                         app:iconStartPadding="8dp"
                         tools:text="1.25x" />
 
@@ -221,7 +220,7 @@
                         android:onClick="onClick"
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_sleep"
-                        app:chipIconTint="@color/white"
+                        app:chipIconTint="#FFFF00"
                         app:iconStartPadding="8dp"
                         tools:text="12h55AM" />
 
@@ -232,7 +231,7 @@
                         android:onClick="onClick"
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_subtitles"
-                        app:chipIconTint="@color/white"
+                        app:chipIconTint="#FFFF00"
                         app:iconStartPadding="8dp"
                         tools:text="+3000ms" />
 
@@ -243,9 +242,10 @@
                         android:onClick="onClick"
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_player_volume"
-                        app:chipIconTint="@color/white"
+                        app:chipIconTint="#FFFF00"
                         app:iconStartPadding="8dp"
                         tools:text="-2000ms" />
+
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 
@@ -259,4 +259,5 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Media control buttons -->
+
 </layout>
