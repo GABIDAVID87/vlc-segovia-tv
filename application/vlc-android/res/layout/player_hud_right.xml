@@ -42,6 +42,21 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Sing Street: este es tu momento" />
 
+        <!-- SEGOVIA TV UBICADO DEBAJO DEL TÍTULO -->
+        <TextView
+                android:id="@+id/segovia_tv_branding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="1dp"
+                android:text="SEGOVIA TV"
+                android:textColor="#FFFFD400"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/player_overlay_title" />
+
         <!-- ADVERTENCIA DE TÍTULO DESCONOCIDO: OCULTA -->
         <TextView
                 android:id="@+id/player_overlay_title_warning"
@@ -72,13 +87,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- RELOJ OCULTO -->
+        <!-- RELOJ MOVIDO AL LADO DERECHO Y VISIBLE -->
         <TextClock
                 android:id="@+id/clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:visibility="gone" />
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="45dp"
+                android:shadowColor="@color/blacktransparent"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="11"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
 
         <!-- MENÚ OCULTO -->
         <ImageView
@@ -174,3 +200,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
+
