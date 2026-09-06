@@ -9,24 +9,24 @@
     Material color swatches
     The main color is always xxx500
 -->
-    <color name="orange50">#fff3e0</color>
-    <color name="orange100">#ffdfae</color>
-    <color name="orange200">#ffca7d</color>
-    <color name="orange300">#ffb54c</color>
-    <color name="orange400">#ffa11a</color>
-    <color name="orange500">#FF8800</color>
-    <color name="orange600">#ff7d00</color>
-    <color name="orange700">#ff7200</color>
-    <color name="orange800">#ff610a</color>
-    <color name="orange900">#ff5014</color>
+    <color name="orange50">#fffde7</color>
+    <color name="orange100">#fff9c4</color>
+    <color name="orange200">#fff59d</color>
+    <color name="orange300">#fff176</color>
+    <color name="orange400">#ffee58</color>
+    <color name="orange500">#FFFFD400</color>
+    <color name="orange600">#FFFFC107</color>
+    <color name="orange700">#FFFFB300</color>
+    <color name="orange800">#FFFFD400</color>
+    <color name="orange900">#FFFFA000</color>
 
     <color name="red500transparent_10">#1aff0000</color>
     <color name="red500transparent25">#40ff0000</color>
     <color name="red500transparent">#b4ff0000</color>
     <color name="red200">#EF9A9A</color>
-    <color name="orange500transparent">#b4ff8800</color>
-    <color name="orange500focus">#86ff8800</color>
-    <color name="orange200transparent">#64ffca7d</color>
+    <color name="orange500transparent">#B4FFFFD400</color>
+    <color name="orange500focus">#86FFFFD400</color>
+    <color name="orange200transparent">#64FFFFF59D</color>
 
     <color name="green50">#bdeadd</color>
     <color name="green100">#a7e3d1</color>
@@ -112,9 +112,9 @@
     <color name="black_transparent_80">#cc000000</color>
     <color name="black_transparent_90">#E6000000</color>
 
-    <color name="orange_800_transparent_10">#1aff610a</color>
-    <color name="orange_800_transparent_20">#33ff610a</color>
-    <color name="orange_500_transparent_20">#33FF8800</color>
+    <color name="orange_800_transparent_10">#1AFFFFD400</color>
+    <color name="orange_800_transparent_20">#33FFFFD400</color>
+    <color name="orange_500_transparent_20">#33FFFFD400</color>
 
     <color name="tv_bg">#34434e</color>
     <color name="tv_card_content">#34434e</color>
