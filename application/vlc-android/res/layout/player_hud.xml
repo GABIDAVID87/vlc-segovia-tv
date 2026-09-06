@@ -155,20 +155,6 @@
                 vlc:layout_constraintVertical_chainStyle="packed"
                 vlc:srcCompat="@drawable/ic_abrepeat_reset_marker_circle" />
 
-        <TextView
-                android:id="@+id/segovia_tv_branding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="1dp"
-                android:text="SEGOVIA TV"
-                android:textColor="#FFFFD400"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:visibility="visible"
-                vlc:layout_constraintStart_toStartOf="parent"
-                vlc:layout_constraintTop_toBottomOf="@+id/player_overlay_title" />
-
         <ImageView
                 android:id="@+id/ab_repeat_stop"
                 android:layout_width="wrap_content"
