@@ -49,14 +49,16 @@
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_half_seek_forward" />
+
     </LinearLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/seekLeftContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@+id/guideline11"
             app:layout_constraintBottom_toBottomOf="@+id/guideline11"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/seekLeftContainer">
+            app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
                 android:id="@+id/seekRewindSecond"
@@ -103,14 +105,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/seekRightContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@+id/guideline11"
             app:layout_constraintBottom_toBottomOf="@+id/guideline11"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/seekRightContainer">
+            app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
                 android:id="@+id/seekForwardFirst"
