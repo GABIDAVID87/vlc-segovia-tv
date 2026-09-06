@@ -15,7 +15,7 @@
             android:visibility="invisible"
             tools:visibility="visible">
 
-        <!-- TÍTULO DE LA PELÍCULA / SERIE -->
+        <!-- TÍTULO DINÁMICO DE LA PELÍCULA / SERIE -->
         <TextView
                 android:id="@+id/player_overlay_title"
                 android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
                 android:layout_marginTop="1dp"
                 android:text="SEGOVIA TV"
                 android:textColor="#FFFFD400"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- RELOJ MOVIDO AL LADO DERECHO Y VISIBLE -->
+        <!-- RELOJ EN EL LADO DERECHO -->
         <TextClock
                 android:id="@+id/clock"
                 android:layout_width="wrap_content"
@@ -200,4 +200,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
-
