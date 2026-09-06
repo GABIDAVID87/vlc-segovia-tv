@@ -63,28 +63,28 @@
 
         <TextView
                 android:id="@+id/player_overlay_title"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="136dp"
+                android:layout_marginStart="104dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="136dp"
+                android:layout_marginEnd="16dp"
                 android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
                 android:maxLines="2"
-                android:paddingBottom="4dp"
+                android:paddingBottom="2dp"
                 android:shadowColor="@color/blacktransparent"
                 android:shadowDx="0"
                 android:shadowDy="2"
                 android:shadowRadius="11"
-                android:textAlignment="center"
-                android:textColor="#FFFF00"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFFFF"
                 android:textSize="22sp"
+                android:textStyle="bold"
                 app:layout_constrainedWidth="true"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Game of Thrones S01-E01" />
+                tools:text="F1: la película" />
 
         <TextView
                 android:id="@+id/player_overlay_title_warning"
