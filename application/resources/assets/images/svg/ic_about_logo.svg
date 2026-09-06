@@ -1,119 +1,18 @@
-<!-- Fondo negro -->
-<rect
-   id="background"
-   x="0"
-   y="0"
-   width="108"
-   height="108"
-   fill="#000000"/>
-
-<!-- Círculo amarillo -->
-<circle
-   id="logo_circle"
-   cx="54"
-   cy="30"
-   r="25"
-   fill="#FFFFD400"/>
-
-<!-- Antenas -->
-<g
-   id="antennas"
-   fill="none"
-   stroke="#000000"
-   stroke-width="2.8"
-   stroke-linecap="round">
-  <path d="M54 23 L45 14"/>
-  <path d="M54 23 L63 14"/>
-</g>
-
-<circle cx="44.5" cy="13.5" r="2.6" fill="#000000"/>
-<circle cx="63.5" cy="13.5" r="2.6" fill="#000000"/>
-
-<!-- Televisor -->
-<rect
-   id="tv_outer"
-   x="37"
-   y="22"
-   width="34"
-   height="22"
-   rx="4.5"
-   fill="#000000"/>
-
-<rect
-   id="tv_screen"
-   x="40"
-   y="25"
-   width="28"
-   height="16"
-   rx="2.5"
-   fill="#FFFFD400"/>
-
-<!-- Play -->
-<path
-   id="play"
-   d="M51 28 L51 38 L60 33 Z"
-   fill="#000000"/>
-
-<!-- Pie del televisor -->
-<path
-   d="M52 44 L56 44 L56 48 L52 48 Z"
-   fill="#000000"/>
-<rect
-   x="48"
-   y="48"
-   width="12"
-   height="2.2"
-   rx="1.1"
-   fill="#000000"/>
-
-<!-- S-TV -->
-<text
-   id="s_text"
-   x="17"
-   y="68"
-   font-family="sans-serif"
-   font-size="18"
-   font-weight="900"
-   fill="#FAFAFA"
-   text-anchor="middle">S</text>
-
-<text
-   id="dash"
-   x="29"
-   y="68"
-   font-family="sans-serif"
-   font-size="13"
-   font-weight="900"
-   fill="#FAFAFA"
-   text-anchor="middle">-</text>
-
-<rect
-   id="tv_badge"
-   x="34"
-   y="56"
-   width="38"
-   height="15"
-   rx="3"
-   fill="#FFFFD400"/>
-
-<text
-   id="tv_text"
-   x="53"
-   y="68"
-   font-family="sans-serif"
-   font-size="13"
-   font-weight="900"
-   fill="#000000"
-   text-anchor="middle">TV</text>
-
-<!-- REPRODUCTOR -->
-<text
-   id="reproductor"
-   x="54"
-   y="82"
-   font-family="sans-serif"
-   font-size="7.2"
-   font-weight="900"
-   letter-spacing="0.25"
-   fill="#FFFFD400"
-   text-anchor="middle">REPRODUCTOR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <rect width="108" height="108" fill="#000000"/>
+  <circle cx="54" cy="30" r="27" fill="#FFEB00"/>
+  <rect x="37" y="19" width="34" height="22" rx="3" ry="3" fill="none" stroke="#000000" stroke-width="2.2"/>
+  <rect x="40" y="22" width="28" height="16" rx="1.5" ry="1.5" fill="#FFEB00"/>
+  <polygon points="48,25 48,35 59,30" fill="#000000"/>
+  <rect x="46" y="41" width="16" height="1.5" rx="0.75" ry="0.75" fill="#000000"/>
+  <rect x="50" y="41" width="8" height="3" fill="#000000"/>
+  <line x1="54" y1="19" x2="46" y2="11" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="46" cy="11" r="1.5" fill="#000000"/>
+  <line x1="54" y1="19" x2="62" y2="11" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="62" cy="11" r="1.5" fill="#000000"/>
+  <text x="14" y="73" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">S</text>
+  <text x="32" y="73" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">-</text>
+  <rect x="43" y="56" width="42" height="19" rx="4" ry="4" fill="#FFEB00"/>
+  <text x="46" y="73" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900" fill="#000000" letter-spacing="1">TV</text>
+  <text x="6" y="92" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="900" fill="#FFEB00" letter-spacing="1.2">REPRODUCTOR</text>
+</svg>
