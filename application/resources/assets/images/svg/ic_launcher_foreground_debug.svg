@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="108px"
-    height="108px"
     viewBox="0 0 108 108"
-    version="1.1">
+    version="1.1"
+    preserveAspectRatio="xMidYMid meet">
 
   <!-- Fondo negro general -->
   <rect x="0" y="0" width="108" height="108" fill="#000000"/>
@@ -28,7 +27,7 @@
 
   </g>
 
-  <!-- Letra R bajada un poco más (coordenada Y ajustada a 62.5) -->
+  <!-- Letra R centrada -->
   <text x="54.5" y="62.5" 
         fill="#FFFFFF" 
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
