@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-        android:installLocation="auto">
+    android:installLocation="auto">
 
     <application
         android:name=".VLCApplication"
@@ -9,14 +11,15 @@
         android:banner="@drawable/banner"
         android:fullBackupContent="@xml/backup_rules"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/stv_r_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:logo="@drawable/icon"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:logo="@drawable/stv_r_icon"
+        android:roundIcon="@mipmap/stv_r_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VLC.Transparent"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
         tools:targetApi="q" />
+
 </manifest>
