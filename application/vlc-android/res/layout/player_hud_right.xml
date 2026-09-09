@@ -260,7 +260,6 @@
                         app:chipBackgroundColor="@color/playerbackground"
                         app:chipIcon="@drawable/ic_player_volume"
                         app:chipIconTint="@color/white"
-dp"
                         app:iconStartPadding="8dp"
                         tools:text="-2000ms" />
             </com.google.android.material.chip.ChipGroup>
