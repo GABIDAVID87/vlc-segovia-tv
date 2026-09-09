@@ -1,35 +1,50 @@
-<!--
-  ~ *************************************************************************
-  ~  ic_cone_o.xml
-  ~ **************************************************************************
-  ~ Copyright © 2020 VLC authors and VideoLAN
-  ~ Author: Nicolas POMEPUY
-  ~ This program is free software; you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation; either version 2 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ This program is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with this program; if not, write to the Free Software
-  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-  ~ ***************************************************************************
-  ~
-  ~
-  -->
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="46dp"
+    android:width="46dp"
+    android:viewportHeight="512"
+    android:viewportWidth="512">
 
-<vector android:height="46dp"
-        android:viewportHeight="130"
-        android:viewportWidth="130"
-        android:width="46dp"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo negro circular exterior -->
     <path
-            android:fillAlpha="1"
-            android:fillColor="#ff8800"
-            android:pathData="m65,8.759c-1.511,0 -3.023,0.368 -4.219,1.107 -2.675,1.653 -4.219,8.437 -4.219,8.437l-2.531,7.594c7.312,4.599 14.625,4.647 21.937,0l-2.531,-7.594c0,0 -1.544,-6.784 -4.219,-8.437 -1.196,-0.739 -2.707,-1.107 -4.219,-1.107zM47.281,46.148 L38.844,71.46c17.304,11.159 34.739,11.376 52.312,0l-8.438,-25.313c-11.912,8.861 -23.725,8.889 -35.437,0zM22.812,81.585 L11,121.241l108,0 -11.813,-39.656 -12.656,0 1.687,5.063c0,0 1.402,4.523 0,5.906 -14.817,14.618 -47.819,13.973 -62.437,-0.844 -1.185,-1.201 0,-5.063 0,-5.063l1.687,-5.063 -12.656,0z"
-            android:strokeColor="#00000000" />
+        android:fillColor="#000000"
+        android:pathData="M256,0C114.6,0 0,114.6 0,256s114.6,256 256,256 256,-114.6 256,-256S397.4,0 256,0z" />
+
+    <!-- Círculo / Anillo amarillo exterior -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M256,32C132.3,32 32,132.3 32,256s100.3,224 224,224 224,-100.3 224,-224S379.7,32 256,32zM256,448C149.9,448 64,362.1 64,256S149.9,64 256,64s192,85.9 192,192-85.9,192-192,192z" />
+
+    <!-- Antenas de la TV -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M205.2,165.7l-53.8,-42.6 -12.2,15.4 53.8,42.6z" />
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M306.8,165.7l53.8,-42.6 12.2,15.4 -53.8,42.6z" />
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M136,128m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0" />
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M376,128m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0" />
+
+    <!-- Patas de la TV -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M160,392l-24,40 18.7,11.2 24,-40z" />
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M352,392l24,40 -18.7,11.2 -24,-40z" />
+
+    <!-- Cuerpo de la Televisión (Pantalla/Caja) -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M392,176H120c-22.1,0 -40,17.9 -40,40v144c0,22.1 17.9,40 40,40h272c22.1,0 40,-17.9 40,-40V216C432,193.9 414.1,176 392,176zM400,360c0,4.4 -3.6,8 -8,8H120c-4.4,0 -8,-3.6 -8,-8V216c0,-4.4 3.6,-8 8,-8h272c4.4,0 8,3.6 8,8V360z" />
+
+    <!-- Letra R central -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M236.4,303.1h-24.8v-112.5c10.3,-2.3 19.3,-4 26.9,-5.3s16.7,-2.5 27.5,-3.8c10.8,-1.3 20.3,-1.9 28.5,-1.9 19.6,0 35,4.3 46.2,12.8 11.2,8.5 16.8,20.4 16.8,35.8 0,10.6 -3.2,20.3 -9.6,29.1 -6.4,8.8 -15.1,15.6 -26,20.4 13.9,4.4 24.6,12.3 32,23.6 7.4,11.3 11.1,24.8 11.1,40.5 0,18.4 -5.5,33 -16.5,43.8 -11,10.8 -27.3,16.2 -48.9,16.2 -7.2,0 -15.4,-0.4 -24.6,-1.2 -9.2,-0.8 -18.7,-1.8 -28.5,-3 -9.8,-1.2 -18.7,-2.2 -26.9,-3 -8.2,-0.8 -14.6,-1.2 -19.1,-1.2zM236.4,228.6v48.4h15.2c12.3,0 21.6,-0.9 28,-2.8 6.4,-1.9 11.3,-5.2 14.8,-9.9 3.5,-4.7 5.2,-10.5 5.2,-17.4 0,-7.1 -1.8,-12.9 -5.4,-17.4 -3.6,-4.5 -8.6,-7.7 -15,-9.5 -6.4,-1.8 -15.8,-2.7 -28.2,-2.7zM236.4,319.4v54.7c7.1,0.7 13.5,1.3 19.1,1.8 5.6,0.5 11.5,1 17.8,1.4 6.3,0.4 12.3,0.6 18,0.6 14.7,0 26,-3.4 33.9,-10.1 7.9,-6.7 11.8,-15.7 11.8,-27 0,-10.3 -3.7,-18.2 -11.1,-23.7 -7.4,-5.5 -18,-8.3 -31.8,-8.3 -8.8,0 -19.3,0.6 -31.5,1.7 -12.2,1.1 -23.2,2.2 -33.2,3.4z" />
+
 </vector>
