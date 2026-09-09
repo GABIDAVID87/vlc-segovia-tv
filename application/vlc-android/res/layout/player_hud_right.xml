@@ -63,7 +63,7 @@
                 app:srcCompat="@drawable/ic_player_screenshot"
                 tools:visibility="visible" />
 
-        <!-- 1. SEGOVIA TV (Más grande, en negrita y arriba a la izquierda) -->
+        <!-- 1. SEGOVIA TV -->
         <TextView
                 android:id="@+id/segovia_tv_branding"
                 android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- 2. TÍTULO DE LA PELÍCULA (Pegado justo debajo de SEGOVIA TV) -->
+        <!-- 2. TÍTULO DE LA PELÍCULA (Pegado a SEGOVIA TV) -->
         <TextView
                 android:id="@+id/player_overlay_title"
                 android:layout_width="0dp"
@@ -103,34 +103,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/segovia_tv_branding"
                 tools:text="Game of Thrones S01-E01" />
-
-        <TextView
-                android:id="@+id/player_overlay_title_warning"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
-                android:background="?attr/selectableItemBackground"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:drawablePadding="16dp"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:maxLines="2"
-                android:paddingBottom="4dp"
-                android:shadowColor="@color/blacktransparent"
-                android:shadowDx="0"
-                android:shadowDy="2"
-                android:shadowRadius="11"
-                android:text="@string/unknown"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                app:drawableStartCompat="@drawable/ic_warning_small"
-                app:layout_constrainedWidth="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/playlist_toggle"
@@ -242,7 +214,7 @@
                         tools:text="12h55AM" />
 
                 <com.google.android.material.chip.Chip
-                        android:id="@+/spu_delay_quick_action"
+                        android:id="@+id/spu_delay_quick_action"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onClick"
