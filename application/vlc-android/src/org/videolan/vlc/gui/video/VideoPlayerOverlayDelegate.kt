@@ -30,6 +30,7 @@ import android.annotation.TargetApi
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
+import android.graphics.BitmapFactory
 import android.os.Build
 import android.view.Gravity
 import android.view.View
@@ -77,6 +78,8 @@ import org.videolan.tools.SHOW_ORIENTATION_BUTTON
 import org.videolan.tools.Settings
 import org.videolan.tools.VIDEO_TRANSITION_SHOW
 import org.videolan.tools.dp
+import java.net.HttpURLConnection
+import java.net.URL
 import org.videolan.tools.formatRateString
 import org.videolan.tools.putSingle
 import org.videolan.tools.runIO
@@ -913,9 +916,49 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             showOverlay()
         }
 
+        setupSegoviaPlaylistHeader()
+
         val callback = SwipeDragItemTouchHelperCallback(playlistAdapter, true)
         val touchHelper = ItemTouchHelper(callback)
         touchHelper.attachToRecyclerView(playlist)
+    }
+
+    private fun setupSegoviaPlaylistHeader() {
+        val banner = player.findViewById<ImageView>(R.id.segovia_playlist_banner) ?: return
+        val series = player.findViewById<TextView>(R.id.segovia_playlist_series) ?: return
+        val seasonView = player.findViewById<TextView>(R.id.segovia_playlist_season) ?: return
+
+        val isSegoviaSeries = player.intent.getBooleanExtra("from_external", false) &&
+                player.intent.getStringExtra("content_type").equals("series", ignoreCase = true)
+        if (!isSegoviaSeries) return
+
+        val seriesTitle = player.intent.getStringExtra("series_title")?.trim().orEmpty()
+        val season = player.intent.getStringExtra("season")?.trim().orEmpty()
+        val bannerUrl = player.intent.getStringExtra("segovia_banner_url")?.trim().orEmpty()
+
+        series.text = seriesTitle.ifBlank { "Segovia TV" }
+        seasonView.text = if (season.isNotBlank()) "TEMPORADA $season" else "TEMPORADA"
+
+        if (bannerUrl.isBlank()) return
+        player.lifecycleScope.launch(Dispatchers.IO) {
+            val bitmap = try {
+                val connection = URL(bannerUrl).openConnection() as HttpURLConnection
+                connection.connectTimeout = 8000
+                connection.readTimeout = 10000
+                connection.instanceFollowRedirects = true
+                connection.doInput = true
+                connection.connect()
+                connection.inputStream.use { BitmapFactory.decodeStream(it) }
+            } catch (_: Exception) {
+                null
+            }
+            withContext(Dispatchers.Main) {
+                if (bitmap != null && !player.isFinishing) {
+                    banner.setImageBitmap(bitmap)
+                    banner.visibility = View.VISIBLE
+                }
+            }
+        }
     }
 
     fun togglePlaylist() {
